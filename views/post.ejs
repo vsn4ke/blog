@@ -1,0 +1,7 @@
+<% content.forEach(post => { %>
+<div>
+  <h4><%= post.name %></h4>
+  <p><%= post.content %></p>
+  <p>Par <%= post.username %> le <%= post.date %></p>
+</div>
+<% }) %>

@@ -1,0 +1,19 @@
+<nav>
+  <% catList.forEach((cat) => { %>
+  <div><a href="/viewCat/<%= cat.slug %>"><%= cat.name %></a></div>
+  <% }) %>
+</nav>
+<nav>
+  <ul>
+<% if(session.userName !== undefined) { %>
+  <% if(session.isAdmin){ %>
+    <li><a href="/administration/category">Administration</a></li>
+  <% } %>
+    <li><%= session.userName %></li>
+    <li><a href="/connection/logout">Déconnexion</a></li>
+<% } else { %>
+    <li><a id="Login" href="#">Connexion</a></li>
+    <li><a id="Register" href="#">Enregistrement</a></li>
+<% } %>
+  </ul>
+</nav>

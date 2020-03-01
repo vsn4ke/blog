@@ -1,0 +1,32 @@
+<aside>
+  <% if(session.isAdmin){ %>
+  <div class="widget">
+    <ul>
+      <li><a href="/administration/categories">Gestion des catégories</a></li>
+      <li><a href="/administration/post">Gestion des posts</a></li>
+      <li><a href="/administration/user">Gestion des membres</a></li>
+      <li><a href="/administration/database">Sauvegarde base de données</a></li>
+    </ul>
+  </div>
+  <% } %>
+  <div class="widget">
+    <h2>Présentation</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie velit sit amet sapien feugiat, id facilisis velit scelerisque. Pellentesque placerat neque non dolor placerat vestibulum. Praesent vitae libero ut tortor iaculis scelerisque vitae non nunc. Proin blandit nibh id tempor iaculis. Fusce vulputate blandit nunc a suscipit.</p>
+  </div>
+  <div class="widget">
+    <h2>Articles populaires</h2>
+    <ul>
+    <% popularList.forEach((post) => { %>
+      <li><a href="/post/<%= post.slug %>"><%= post.name %></a></li>
+    <% }) %>
+    </ul>
+  </div>
+  <div class="widget">
+    <h2>Categories</h2>
+    <ul>
+    <% catList.forEach((cat) => { %>
+      <li><a href="/viewCat/<%= cat.slug %>"><%= cat.name %> <%= cat.postCount %></a></li>
+    <% }) %>
+    </ul>
+  </div>
+</aside>

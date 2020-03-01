@@ -1,0 +1,25 @@
+<div id="modal">
+  <div id="LoginModal" class="modal">
+      <span id="closeLogin" class="close">x</span>
+      <div class="modal-content">
+          <h3>Connexion : </h3>
+          <form action="/connection/login" method="post" id="loginForm">
+              <p><label for="lusr">Nom d'utilisateur : </label><input id="lusr" type="text" name="userName"></p>
+              <p><label for="lpwd">Mot de passe : </label><input id="lpwd" type="password" name="userPassword"></p>
+              <p><input type="submit"  value="Connexion"></p>
+          </form>
+      </div>
+  </div>
+  <div id="RegisterModal" class="modal">
+      <span id="closeRegister" class="close">x</span>
+      <div class="modal-content">
+          <h3>Enregistrement : </h3>
+          <form action="/connection/register" method="post" id="registerForm">
+              <p><label for="rusr">Nom d'utilisateur : </label><input id="rusr" type="text" name="userName"></p>
+              <p><label for="rpwd">Mot de passe : </label><input id="rpwd" type="password" name="userPassword"></p>
+              <p><label for="pwdConfirmation">Confirmation : </label><input id="pwdConfirmation" type="password" name="userPasswordConfirmation"></p>
+              <p><input type="submit"  value="Enregistrement"></p>
+          </form>
+      </div>
+  </div>
+</div>
